@@ -1,89 +1,3 @@
-# 🏆 O Grand Slam do Futebol
-
-> Copa do Mundo, Champions League, Libertadores e Mundial de Clubes com pesos diferenciados. Média geral de gols, participações (G+A) na Copa do Mundo ponderadas por fase — um gol na final vale 3× mais que na fase de grupos — e títulos de liga nacional. Somente dados oficiais.
-
----
-
-## 📊 Metodologia de Pontuação
-
-| Critério | Peso |
-|---|---|
-| 🏆 Copa do Mundo | ×5 pts por título |
-| ⭐ Champions League | ×3 pts por título |
-| 🌎 Libertadores | ×2 pts por título |
-| 🌍 Mundial de Clubes | ×1 pt por título |
-| ⚽ Média de gols/jogo | ×6 pts |
-| 🌟 (G+A) Copa do Mundo ponderado ÷ jogos | ×20 pts |
-| 🥇 Ligas nacionais de 1ª divisão | ×0,5 pt por título |
-
-### Ponderação por fase na Copa do Mundo
-
-| Fase | Multiplicador |
-|---|---|
-| Grupos | ×1 |
-| Oitavas de final | ×1,5 |
-| Quartas de final | ×2 |
-| Semifinal | ×2,5 |
-| Final | ×3 |
-
-> **Score final** = Títulos ponderados + média geral de gols ×6 + (G+A) Copa ponderado ÷ jogos ×20 + ligas ×0,5
-
----
-
-## 🥇 Ranking Final
-
-| # | Jogador | Ligas nacionais | Score |
-|---|---|---|---|
-| 1 | Pelé | 6 Brasileirão | **78,0** |
-| 2 | Lionel Messi | 10 La Liga + 2 Ligue 1 = 12 | **59,3** |
-| 3 | Gerd Müller | 4 Bundesliga | **~51,3** |
-| 4 | Ronaldo Fenômeno (R9) | 1 Brasileirão | **50,8** |
-| 5 | Cristiano Ronaldo | 3 PL + 2 La Liga + 2 Serie A + 1 Saudi = 8 | **33,7** |
-| 6 | Maradona | 1 Argentino + 2 Serie A = 3 | **32,9** |
-| 7 | Neymar Jr | 1 Brasileirão + 2 Ligue 1 = 3 | **26,6** |
-
----
-
-## 🔍 Destaques da Análise
-
-**Pelé (1º — 78,0):** Três Copas do Mundo, média de 0,90 gol/jogo em 757 gols/840 jogos e participações decisivas em todas as fases eliminatórias consolidam O Rei no topo com folga. 6 títulos do Brasileirão (Taça Brasil + Robertão).
-
-**Messi (2º — 59,3):** Quatro Champions League, Copa do Mundo 2022, 12 ligas nacionais (10 La Liga + 2 Ligue 1) e a maior pontuação em G+A Copa do Mundo entre os jogadores modernos.
-
-**Gerd Müller (3º — ~51,3):** Der Bomber é o grande esquecido dos rankings modernos. 1 Copa do Mundo (1974, gol na final), 3 Champions League, 1 Copa Intercontinental, 4 Bundesligas e média de ~0,85 gol/jogo em toda a carreira. Seus 10 gols na Copa de 1970 — incluindo 1 nas quartas e 2 na semifinal — pesam muito no modelo por fase. Praticamente empatado com Ronaldo Fenômeno no score, os dois são os melhores centroavantes puros da história.
-
-**Ronaldo Fenômeno (4º — 50,8):** Duas Copas do Mundo e média de 0,67 gol/jogo com 414 gols em 616 jogos. Desempenho excepcional no mata-mata das Copas.
-
-**CR7 (5º — 33,7) — maior penalidade do modelo:** Apesar dos 5 Champions e 8 ligas nacionais (3 Premier League, 2 La Liga, 2 Serie A, 1 Saudi Pro League), todos os 8 gols em Copas do Mundo foram na fase de grupos. **Nunca marcou em mata-mata** em Copas — o modelo por fase penaliza exatamente isso.
-
-**Maradona (6º — 32,9):** 1 Copa do Mundo, 3 ligas nacionais (1 Campeonato Argentino pelo Boca Juniors + 2 Serie A pelo Napoli). O modelo por fase revela o verdadeiro valor de 1986 — 4G+4A nas quartas/semi/final valem muito mais que gols concentrados nos grupos, o que coloca Maradona à frente de Neymar.
-
-**Neymar Jr (7º — 26,6):** 1 Champions League, 1 Libertadores, 3 ligas nacionais (1 Brasileirão + 2 Ligue 1).
-
----
-
-## 📁 Arquivos
-
-- `grand-slam-futebol-v2.pdf` — Infográfico atualizado com Gerd Müller e ligas corrigidas
-
----
-
-## ⚙️ Notas Técnicas
-
-- **Ligas contabilizadas:** apenas campeonatos nacionais de 1ª divisão (Brasileirão, La Liga, Serie A, Premier League, Ligue 1, Bundesliga, Campeonato Argentino, Saudi Pro League). Títulos estaduais não são contabilizados pois os demais jogadores nunca disputaram equivalentes regionais. Vale registrar, porém: Pelé conquistou **10 Campeonatos Paulistas** pelo Santos, competição altamente disputada contra Corinthians, Palmeiras e São Paulo, numa era em que os jogadores acumulavam torneios nacionais, estaduais e internacionais simultaneamente — calendário muito mais denso que o atual.
-- **Mundial de Clubes** inclui a Copa Intercontinental (até 2004)
-- Todos os dados são **oficiais** — sem estimativas ou dados não verificados
-
----
-
-## 👤 Autor
-
-**Marcelo Carvalho** · 2026  
-💼 [linkedin.com/in/earth-marcelo](https://linkedin.com/in/earth-marcelo)  
-💾 [github.com/earth-marcelo](https://github.com/earth-marcelo)
-
----
-
 # 🏆 O Grand Slam das Seleções Brasileiras
 
 > Gols marcados e sofridos ponderados pela fase do Brasil multiplicada pela fase que o adversário atingiu no torneio. Um gol na final contra o vice-campeão vale 9× mais que um gol na fase de grupos contra um time eliminado na primeira fase.
@@ -126,29 +40,29 @@
 
 ## 🔍 Destaques da Análise
 
-**1958 (1º — 56,75):** Liderou pela dificuldade dos adversários. Goleou a França (3º lugar) por 5-2 na semifinal e a Suécia (finalista e anfitriã) por 5-2 na final. No centro dessa campanha, Pelé com 17 anos marcou 6 gols incluindo 2 na final. Mas além de ser a melhor, foi a mais importante: primeira Copa fora das Américas, fim do trauma do Maracanazo de 1950, apresentação de Pelé ao mundo. Sem 1958 não existiriam as outras quatro.
+**1958 (1º):** Liderou pela dificuldade dos adversários. Goleou a França (3º lugar) por 5-2 na semifinal e a Suécia (finalista e anfitriã) por 5-2 na final. No centro dessa campanha, Pelé com 17 anos marcou 6 gols incluindo 2 na final. Mas além de ser a melhor, foi a mais importante: primeira Copa fora das Américas, fim do trauma do Maracanazo de 1950, apresentação de Pelé ao mundo. Sem 1958 não existiriam as outras quatro.
 
-**1970 (2º — 53,5):** Tecnicamente pode ter sido a melhor seleção da história do futebol. Pelé no auge, Jairzinho marcando em todos os jogos (feito único até hoje), Carlos Alberto, Rivelino, Tostão. 19 gols em 6 jogos, nenhuma derrota. Ficou em segundo pela força dos adversários nas fases iniciais ser menor que em 1958.
+**1970 (2º):** Tecnicamente pode ter sido a melhor seleção da história do futebol. Pelé no auge, Jairzinho marcando em todos os jogos (feito único até hoje), Carlos Alberto, Rivelino, Tostão. 19 gols em 6 jogos, nenhuma derrota. Ficou em segundo pela força dos adversários nas fases iniciais ser menor que em 1958.
 
-**2002 (3º — 43,75):** Ronaldo R9 em plena ressurreição após duas cirurgias no joelho. 8 gols no torneio, 2 na final contra a Alemanha. Única seleção a vencer todos os 7 jogos do torneio.
+**2002 (3º):** Ronaldo R9 em plena ressurreição após duas cirurgias no joelho. 8 gols no torneio, 2 na final contra a Alemanha. Única seleção a vencer todos os 7 jogos do torneio.
 
-**1962 (4º — 41,5):** Pelé se lesionou na segunda rodada e Garrincha assumiu o protagonismo, liderando o Brasil ao bicampeonato. Uma das maiores histórias de superação da Copa do Mundo.
+**1962 (4º):** Pelé se lesionou na segunda rodada e Garrincha assumiu o protagonismo, liderando o Brasil ao bicampeonato. Uma das maiores histórias de superação da Copa do Mundo.
 
-**1994 (5º — 18,5):** 0 gols na final, decidida nos pênaltis. Tomou 2 gols da Holanda nas quartas — adversário que chegou até a semifinal, o que penaliza muito a defesa no modelo. Campeã na raça, não no futebol bonito que o Brasil sempre representou.
+**1994 (5º):** 0 gols na final, decidida nos pênaltis. Tomou 2 gols da Holanda nas quartas (adversário que chegou até a semifinal), o que penaliza muito a defesa no modelo. Campeã na raça, não no futebol bonito que o Brasil sempre representou.
 
 ---
 
 ## 📁 Arquivos
 
 - `grand-slam-selecoes.pdf` — Infográfico completo
-- `grand-slam-futebol-v5.pdf` — Grand Slam dos jogadores
+
 
 ---
 
 ## ⚙️ Notas Técnicas
 
 - A diferença entre **a melhor** e **a mais importante**: 1970 pode ter sido tecnicamente superior, mas 1958 foi historicamente mais relevante. O modelo captura isso colocando as duas praticamente empatadas no topo.
-- 1994 é penalizada pelo modelo por refletir fielmente o estilo mais conservador daquela campanha — o oposto do DNA ofensivo do futebol brasileiro.
+- 1994 é penalizada pelo modelo por refletir fielmente o estilo mais conservador daquela campanha, o oposto do DNA ofensivo do futebol brasileiro.
 - Os pesos se **multiplicam** (não somam): fase do Brasil × fase do adversário. Isso amplifica muito as conquistas nas fases decisivas contra adversários fortes.
 
 ---
