@@ -1,74 +1,36 @@
-# 🏆 O Grand Slam das Seleções Brasileiras
+# O Grand Slam das Seleções — versão notebook
 
-> Gols marcados e sofridos ponderados pela fase do Brasil multiplicada pela fase que o adversário atingiu no torneio. Um gol na final contra o vice-campeão vale 9× mais que um gol na fase de grupos contra um time eliminado na primeira fase.
+Reconstrução em código (pandas + Python) do ranking das 5 campanhas campeãs do Brasil na Copa do Mundo, originalmente publicado como README + infográfico em PDF sem dado bruto versionado.
 
----
+## O que mudou em relação à v5 (PDF)
 
-## 📊 Metodologia
+- Implementa a metodologia como função Python reutilizável
+- Reconstrói o jogo a jogo de cada uma das 5 campanhas (adversário, gols, fase) — 1958, 1970 e 1962 batem **exatamente** com o Ataque/Defesa/Score publicados na v5
+- **Corrige uma divergência histórica real que estava nos dados da v5:** a campanha de 1994 tratava a Holanda como semifinalista, mas historicamente ela foi eliminada nas quartas de final — pelo próprio Brasil. Corrigido nesta versão: o score de 1994 passa de 18,5 para **17,5** (não muda a posição no ranking). Ver seção 4 do notebook.
+- 2002 tem um resíduo pequeno (~1,5 pt no ataque, sem afetar a colocação) que não foi possível rastrear — todos os 7 placares e fases de adversário foram conferidos contra múltiplas fontes e batem; documentado como pendente em vez de forçar um ajuste sem base
 
-| Critério | Descrição |
-|---|---|
-| ⚽ Ataque | Gols marcados × Fase Brasil × Fase adversário |
-| 🛡️ Defesa | Gols sofridos × Fase Brasil × Fase adversário (penaliza) |
-| 🏆 Score | Ataque − Defesa |
+## Estrutura
 
-### Ponderação por fase
+```
+grand_slam_selecoes/
+├── README.md
+├── requirements.txt
+├── data/
+│   ├── jogos_v5_oficial.csv          # jogo a jogo das 5 campanhas
+│   └── campanhas_v5_oficial.csv      # resultado agregado publicado na v5
+└── notebooks/
+    └── 01_ranking_selecoes.ipynb
+```
 
-| Fase | Multiplicador |
-|---|---|
-| Grupos | ×1 |
-| Oitavas de final | ×1,5 |
-| Quartas de final | ×2 |
-| Semifinal | ×2,5 |
-| Final | ×3 |
+## Status
 
-> Um gol marcado na final contra um adversário que também chegou à final vale **3 × 3 = 9×** mais que um gol na fase de grupos contra um time eliminado na primeira fase.
+- [x] Reconstrução da metodologia em código
+- [x] Jogo a jogo de todas as 5 campanhas
+- [x] Validação: 3 de 5 campanhas batem exatamente com o score publicado
+- [x] Divergência histórica de 1994 (Holanda) encontrada e corrigida (18,5 → 17,5)
+- [ ] Resíduo de 2002 (~1,5 pt) permanece sem explicação encontrada — documentado, não forçado
+- [x] Infográfico v6 em PDF gerado, com o dado corrigido de 1994
 
----
+## Infográfico (v6)
 
-## 🥇 Ranking Final
-
-| # | Seleção | Técnico | Ataque | Defesa | Score |
-|---|---|---|---|---|---|
-| 1 | **1958 — Suécia** | Vicente Feola | 87,25 | 30,5 | **56,75** |
-| 2 | **1970 — México** | Mário Zagallo | 79,75 | 26,25 | **53,5** |
-| 3 | **2002 — Coreia/Japão** | Luiz Felipe Scolari | 52,25 | 8,5 | **43,75** |
-| 4 | **1962 — Chile** | Aymoré Moreira | 68,0 | 26,5 | **41,5** |
-| 5 | **1994 — EUA** | Carlos Alberto Parreira | 31,0 | 12,5 | **18,5** |
-
----
-
-## 🔍 Destaques da Análise
-
-**1958 (1º):** Liderou pela dificuldade dos adversários. Goleou a França (3º lugar) por 5-2 na semifinal e a Suécia (finalista e anfitriã) por 5-2 na final. No centro dessa campanha, Pelé com 17 anos marcou 6 gols incluindo 2 na final. Mas além de ser a melhor, foi a mais importante: primeira Copa fora das Américas, fim do trauma do Maracanazo de 1950, apresentação de Pelé ao mundo. Sem 1958 não existiriam as outras quatro.
-
-**1970 (2º):** Tecnicamente pode ter sido a melhor seleção da história do futebol. Pelé no auge, Jairzinho marcando em todos os jogos (feito único até hoje), Carlos Alberto, Rivelino, Tostão. 19 gols em 6 jogos, nenhuma derrota. Ficou em segundo pela força dos adversários nas fases iniciais ser menor que em 1958.
-
-**2002 (3º):** Ronaldo R9 em plena ressurreição após duas cirurgias no joelho. 8 gols no torneio, 2 na final contra a Alemanha. Única seleção a vencer todos os 7 jogos do torneio.
-
-**1962 (4º):** Pelé se lesionou na segunda rodada e Garrincha assumiu o protagonismo, liderando o Brasil ao bicampeonato. Uma das maiores histórias de superação da Copa do Mundo.
-
-**1994 (5º):** 0 gols na final, decidida nos pênaltis. Tomou 2 gols da Holanda nas quartas (adversário que chegou até a semifinal), o que penaliza muito a defesa no modelo. Campeã na raça, não no futebol bonito que o Brasil sempre representou.
-
----
-
-## 📁 Arquivos
-
-- `grand-slam-selecoes.pdf` — Infográfico completo
-
-
----
-
-## ⚙️ Notas Técnicas
-
-- A diferença entre **a melhor** e **a mais importante**: 1970 pode ter sido tecnicamente superior, mas 1958 foi historicamente mais relevante. O modelo captura isso colocando as duas praticamente empatadas no topo.
-- 1994 é penalizada pelo modelo por refletir fielmente o estilo mais conservador daquela campanha, o oposto do DNA ofensivo do futebol brasileiro.
-- Os pesos se **multiplicam** (não somam): fase do Brasil × fase do adversário. Isso amplifica muito as conquistas nas fases decisivas contra adversários fortes.
-
----
-
-## 👤 Autor
-
-**Marcelo Carvalho** · 2026
-💼 [linkedin.com/in/earth-marcelo](https://linkedin.com/in/earth-marcelo)
-💾 [github.com/earth-marcelo](https://github.com/earth-marcelo)
+`infografico/grand-slam-selecoes-v6.pdf` — mesmo estilo visual do infográfico original, já com a correção da Holanda/1994. Fonte editável em `infografico/grand-slam-selecoes-v6.html`.

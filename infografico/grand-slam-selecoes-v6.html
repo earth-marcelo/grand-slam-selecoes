@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>O Grand Slam das Seleções — v6</title>
+<style>
+  @page { size: 1275px 1150px; margin: 0; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #f3ede2;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #1c1c1c;
+    width: 1275px;
+  }
+  .page { padding: 40px 48px 32px; }
+  .kicker {
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #6b6558;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-size: 52px;
+    font-weight: 800;
+    margin: 0 0 16px;
+    letter-spacing: -1px;
+  }
+  h1 .slam { color: #2f7a3b; }
+  .intro {
+    max-width: 1000px;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: #3a362e;
+    border-left: 4px solid #2f7a3b;
+    padding-left: 16px;
+    margin-bottom: 20px;
+  }
+  .badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+  .badge {
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #fff;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #fffdf9;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  thead th {
+    text-align: left;
+    font-size: 10.5px;
+    letter-spacing: 0.5px;
+    color: #7a7362;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    border-bottom: 2px solid #e4dcc9;
+  }
+  tbody td {
+    padding: 16px;
+    border-bottom: 1px solid #ece5d5;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  tr.updated td { background: #fbf3e6; }
+  .rank {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: #2f2b22; color: #fff; font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  tr:nth-child(1) .rank { background: #c9a227; }
+  .campanha-titulo { font-weight: 800; font-size: 18px; }
+  .campanha-sede { font-size: 11.5px; color: #7a7362; margin-top: 1px; }
+  .tecnico { font-size: 11.5px; color: #4a4638; margin-top: 6px; }
+  .destaque { font-size: 11.5px; color: #6b6558; font-style: italic; margin-top: 4px; max-width: 320px; line-height: 1.4; }
+  .stat-val { font-size: 17px; font-weight: 800; }
+  .stat-label { font-size: 10px; color: #948c78; text-transform: uppercase; letter-spacing: 0.4px; }
+  .ataque .stat-val { color: #2f7a3b; }
+  .defesa .stat-val { color: #b5561f; }
+  .score-val { font-size: 24px; font-weight: 800; color: #2f7a3b; }
+  tr:nth-child(1) .score-val { color: #8a6a10; }
+  .score-bar { height: 5px; background: #e4dcc9; border-radius: 3px; margin-top: 6px; width: 100px; overflow: hidden; }
+  .score-bar-fill { height: 100%; background: #2f7a3b; }
+  tr:nth-child(1) .score-bar-fill { background: #c9a227; }
+  .new-badge {
+    background: #2f7a3b;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 5px;
+    padding: 2px 7px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .footnote {
+    margin-top: 20px;
+    font-size: 10.5px;
+    color: #6b6558;
+    line-height: 1.6;
+    border-top: 1px solid #e4dcc9;
+    padding-top: 14px;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 11.5px;
+    color: #4a4638;
+  }
+  .footer a { color: #2f7a3b; font-weight: 700; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="kicker">ANÁLISE ESTATÍSTICA · FUTEBOL BRASILEIRO · COPAS DO MUNDO · v6 — CORRIGIDO</div>
+  <h1>O GRAND <span class="slam">SLAM</span> DAS SELEÇÕES</h1>
+  <div class="intro">
+    Gols marcados e sofridos ponderados pela fase do Brasil e pela fase que o adversário atingiu no torneio. Um gol na final contra o
+    vice-campeão vale 9× mais que um gol na fase de grupos contra um time eliminado na primeira fase.
+    <strong>Versão 6:</strong> corrige um dado histórico da v5 — a Holanda de 1994 era tratada como semifinalista; historicamente foi
+    eliminada nas quartas de final pelo próprio Brasil. O score de 1994 passa de 18,5 para 17,5 (posição no ranking não muda).
+  </div>
+
+  <div class="badges">
+    <span class="badge" style="background:#2f7a3b">Ataque = Gols marcados × Fase Brasil × Fase adversário</span>
+    <span class="badge" style="background:#b5561f">Defesa = Gols sofridos × Fase Brasil × Fase adversário</span>
+    <span class="badge" style="background:#2f2b22">Score = Ataque − Defesa</span>
+    <span class="badge" style="background:#4a7a2f">Grupos ×1</span>
+    <span class="badge" style="background:#c9762b">Oitavas ×1,5</span>
+    <span class="badge" style="background:#2b6fa8">Quartas ×2</span>
+    <span class="badge" style="background:#7a4fa8">Semi ×2,5</span>
+    <span class="badge" style="background:#2f2b22">Final ×3</span>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Seleção</th>
+        <th>Ataque</th>
+        <th>Defesa</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div class="rank">1</div></td>
+        <td>
+          <div class="campanha-titulo">1958 — Suécia</div>
+          <div class="campanha-sede">Sede: Suécia</div>
+          <div class="tecnico">Vicente Feola · Capitão: Bellini</div>
+          <div class="destaque">Pelé (17 anos · 6 gols · 2 na final) · Garrincha · Didi · Vavá · Zagallo</div>
+        </td>
+        <td class="ataque"><div class="stat-val">87,25</div><div class="stat-label">Ataque</div></td>
+        <td class="defesa"><div class="stat-val">30,5</div><div class="stat-label">Defesa</div></td>
+        <td>
+          <div class="score-val">56,75</div>
+          <div class="score-bar"><div class="score-bar-fill" style="width:100%"></div></div>
+        </td>
+      </tr>
+      <tr>
+        <td><div class="rank">2</div></td>
+        <td>
+          <div class="campanha-titulo">1970 — México</div>
+          <div class="campanha-sede">Sede: México</div>
+          <div class="tecnico">Mário Zagallo · Capitão: Carlos Alberto</div>
+          <div class="destaque">Pelé · Jairzinho (gol em todos os jogos) · Tostão · Rivelino · Gerson</div>
+        </td>
+        <td class="ataque"><div class="stat-val">79,75</div><div class="stat-label">Ataque</div></td>
+        <td class="defesa"><div class="stat-val">26,25</div><div class="stat-label">Defesa</div></td>
+        <td>
+          <div class="score-val">53,5</div>
+          <div class="score-bar"><div class="score-bar-fill" style="width:94%"></div></div>
+        </td>
+      </tr>
+      <tr>
+        <td><div class="rank">3</div></td>
+        <td>
+          <div class="campanha-titulo">2002 — Coreia/Japão</div>
+          <div class="campanha-sede">Sede: Coreia do Sul e Japão</div>
+          <div class="tecnico">Luiz Felipe Scolari · Capitão: Cafu</div>
+          <div class="destaque">Ronaldo R9 (8 gols · 2 na final) · Ronaldinho · Rivaldo · Roberto Carlos — único time a vencer os 7 jogos do torneio</div>
+        </td>
+        <td class="ataque"><div class="stat-val">52,25</div><div class="stat-label">Ataque</div></td>
+        <td class="defesa"><div class="stat-val">8,5</div><div class="stat-label">Defesa</div></td>
+        <td>
+          <div class="score-val">43,75</div>
+          <div class="score-bar"><div class="score-bar-fill" style="width:77%"></div></div>
+        </td>
+      </tr>
+      <tr>
+        <td><div class="rank">4</div></td>
+        <td>
+          <div class="campanha-titulo">1962 — Chile</div>
+          <div class="campanha-sede">Sede: Chile</div>
+          <div class="tecnico">Aymoré Moreira · Capitão: Mauro Ramos</div>
+          <div class="destaque">Garrincha (herói após lesão de Pelé) · Vavá · Amarildo · Zito</div>
+        </td>
+        <td class="ataque"><div class="stat-val">68,0</div><div class="stat-label">Ataque</div></td>
+        <td class="defesa"><div class="stat-val">26,5</div><div class="stat-label">Defesa</div></td>
+        <td>
+          <div class="score-val">41,5</div>
+          <div class="score-bar"><div class="score-bar-fill" style="width:73%"></div></div>
+        </td>
+      </tr>
+      <tr class="updated">
+        <td><div class="rank">5</div></td>
+        <td>
+          <div class="campanha-titulo">1994 — EUA<span class="new-badge">CORRIGIDO v6</span></div>
+          <div class="campanha-sede">Sede: Estados Unidos</div>
+          <div class="tecnico">Carlos Alberto Parreira · Capitão: Dunga</div>
+          <div class="destaque">Romário (Bola de Ouro) · Bebeto · Mazinho · Branco · Taffarel — decidida nos pênaltis</div>
+        </td>
+        <td class="ataque"><div class="stat-val">28,0</div><div class="stat-label">Ataque</div></td>
+        <td class="defesa"><div class="stat-val">10,5</div><div class="stat-label">Defesa</div></td>
+        <td>
+          <div class="score-val">17,5</div>
+          <div class="score-bar"><div class="score-bar-fill" style="width:31%"></div></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footnote">
+    <strong>Por que 1958 lidera?</strong> A seleção goleou a França (3º lugar) por 5-2 na semifinal e a Suécia (finalista e anfitriã) por 5-2 na final —
+    adversários que chegaram longe no torneio, multiplicando cada gol. No centro dessa campanha, um jovem de 17 anos chamado Pelé marcou 6 gols, incluindo 2 na final.<br>
+    <strong>Correção da v6:</strong> a v5 tratava a Holanda de 1994 como semifinalista (o que inflava o peso do 3-2 sofrido nas quartas). Historicamente, a Holanda
+    foi eliminada nas quartas pelo próprio Brasil — as semifinais de 1994 foram Brasil x Suécia e Itália x Bulgária. Corrigido: score de 1994 cai de 18,5 para 17,5,
+    sem mudar a posição no ranking.
+  </div>
+
+  <div class="footer">
+    <span>Metodologia &amp; criação: Marcelo Carvalho · 2026 (v6)</span>
+    <span><a href="https://linkedin.com/in/earth-marcelo">linkedin.com/in/earth-marcelo</a> &nbsp;·&nbsp; <a href="https://github.com/earth-marcelo">github.com/earth-marcelo</a></span>
+  </div>
+</div>
+</body>
+</html>

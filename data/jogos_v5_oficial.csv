@@ -1,0 +1,33 @@
+campanha,adversario,fase_brasil,gols_marcados,gols_sofridos,fase_adversario,fase_adversario_real,observacao
+1958,Austria,grupos,3,0,grupos,grupos,
+1958,Inglaterra,grupos,0,0,grupos,grupos,
+1958,URSS,grupos,2,0,quartas,quartas,
+1958,Gales,quartas,1,0,quartas,quartas,
+1958,Franca,semifinal,5,2,semifinal,semifinal,3o lugar
+1958,Suecia,final,5,2,final,final,vice-campeao
+1970,Tchecoslovaquia,grupos,4,1,grupos,grupos,
+1970,Inglaterra,grupos,1,0,quartas,quartas,
+1970,Romenia,grupos,3,2,grupos,grupos,
+1970,Peru,quartas,4,2,quartas,quartas,
+1970,Uruguai,semifinal,3,1,semifinal,semifinal,3o lugar
+1970,Italia,final,4,1,final,final,vice-campeao
+1962,Mexico,grupos,2,0,grupos,grupos,
+1962,Tchecoslovaquia,grupos,0,0,final,final,vice-campeao; reencontro na final
+1962,Espanha,grupos,2,1,grupos,grupos,
+1962,Inglaterra,quartas,3,1,quartas,quartas,
+1962,Chile,semifinal,4,2,semifinal,semifinal,3o lugar; anfitriao
+1962,Tchecoslovaquia,final,3,1,final,final,vice-campeao
+1994,Russia,grupos,2,0,grupos,grupos,
+1994,Camaroes,grupos,3,0,grupos,grupos,
+1994,Suecia,grupos,1,1,semifinal,semifinal,3o lugar; reencontro na semifinal
+1994,Estados Unidos,oitavas,1,0,oitavas,oitavas,
+1994,Holanda,quartas,3,2,quartas,quartas,CORRIGIDO na v6: PDF v5 tratava como semifinalista; historicamente eliminada nas quartas pelo proprio Brasil
+1994,Suecia,semifinal,1,0,semifinal,semifinal,3o lugar
+1994,Italia,final,0,0,final,final,vice-campeao; decidido nos penaltis
+2002,Turquia,grupos,2,1,semifinal,semifinal,3o lugar; reencontro na semi
+2002,China,grupos,4,0,grupos,grupos,
+2002,Costa Rica,grupos,5,2,grupos,grupos,
+2002,Belgica,oitavas,2,0,oitavas,oitavas,
+2002,Inglaterra,quartas,2,1,quartas,quartas,
+2002,Turquia,semifinal,1,0,semifinal,semifinal,3o lugar
+2002,Alemanha,final,2,0,final,final,vice-campeao
